@@ -13,15 +13,15 @@ import androidx.navigation.NavDestination.Companion.hierarchy
 import androidx.navigation.NavGraph.Companion.findStartDestination
 import androidx.navigation.NavHostController
 import androidx.navigation.compose.currentBackStackEntryAsState
-import com.example.nested_navigation.routes.BottomBarRoutes
+import com.example.nested_navigation.graphs.BottomBarNavGraph
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
 fun BottomBar(navController: NavHostController) {
     val screens = listOf(
-        BottomBarRoutes.Home,
-        BottomBarRoutes.Profile,
-        BottomBarRoutes.Settings,
+        BottomBarNavGraph.Home,
+        BottomBarNavGraph.Profile,
+        BottomBarNavGraph.Settings,
     )
     val navBackStackEntry by navController.currentBackStackEntryAsState()
     val currentDestination = navBackStackEntry?.destination
@@ -42,7 +42,7 @@ fun BottomBar(navController: NavHostController) {
 
 @Composable
 fun RowScope.NavigationBarItem(
-    screen: BottomBarRoutes,
+    screen: BottomBarNavGraph,
     currentDestination: NavDestination?,
     navController: NavHostController,
 ) {

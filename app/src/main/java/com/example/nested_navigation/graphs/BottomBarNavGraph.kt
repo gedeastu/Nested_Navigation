@@ -1,4 +1,4 @@
-package com.example.nested_navigation.routes
+package com.example.nested_navigation.graphs
 
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.Home
@@ -6,24 +6,24 @@ import androidx.compose.material.icons.filled.Person
 import androidx.compose.material.icons.filled.Settings
 import androidx.compose.ui.graphics.vector.ImageVector
 
-sealed class BottomBarRoutes(
+sealed class BottomBarNavGraph(
     val route: String,
     val title: String,
     val icon: ImageVector
 ) {
-    data object Home : BottomBarRoutes(
+    data object Home : BottomBarNavGraph(
         route = "HOME",
         title = "HOME",
         icon = Icons.Default.Home
     )
 
-    data object Profile : BottomBarRoutes(
+    data object Profile : BottomBarNavGraph(
         route = "PROFILE",
         title = "PROFILE",
         icon = Icons.Default.Person
     )
 
-    data object Settings : BottomBarRoutes(
+    data object Settings : BottomBarNavGraph(
         route = "SETTINGS",
         title = "SETTINGS",
         icon = Icons.Default.Settings

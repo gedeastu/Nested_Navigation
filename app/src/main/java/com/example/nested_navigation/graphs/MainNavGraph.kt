@@ -6,12 +6,11 @@ import androidx.navigation.NavHostController
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.navigation
-import com.example.nested_navigation.routes.BottomBarRoutes
 import com.example.nested_navigation.screens.ScreenContent
 
 @Composable
 fun MainNavGraph(navController: NavHostController){
-    NavHost(navController = navController, startDestination = BottomBarRoutes.Home.route, route = Graph.MAIN_SCREEN_PAGE){
+    NavHost(navController = navController, startDestination = BottomBarNavGraph.Home.route, route = Graph.MAIN_SCREEN_PAGE){
         homeNavGraph(navController = navController)
         profileNavGraph(navController = navController)
         settingsNavGraph(navController = navController)
@@ -22,9 +21,9 @@ fun MainNavGraph(navController: NavHostController){
 }
 
 fun NavGraphBuilder.homeNavGraph(navController: NavHostController){
-    composable(route = BottomBarRoutes.Home.route) {
+    composable(route = BottomBarNavGraph.Home.route) {
         ScreenContent(
-            name = BottomBarRoutes.Home.route,
+            name = BottomBarNavGraph.Home.route,
             onClick = {
                 navController.navigate(Graph.DETAILS)
             }
@@ -33,9 +32,9 @@ fun NavGraphBuilder.homeNavGraph(navController: NavHostController){
 }
 
 fun NavGraphBuilder.profileNavGraph(navController: NavHostController){
-    composable(route = BottomBarRoutes.Profile.route) {
+    composable(route = BottomBarNavGraph.Profile.route) {
         ScreenContent(
-            name = BottomBarRoutes.Profile.route,
+            name = BottomBarNavGraph.Profile.route,
             onClick = {
                 navController.navigate(Graph.DETAILS)
             }
@@ -44,9 +43,9 @@ fun NavGraphBuilder.profileNavGraph(navController: NavHostController){
 }
 
 fun NavGraphBuilder.settingsNavGraph(navController: NavHostController){
-    composable(route = BottomBarRoutes.Settings.route) {
+    composable(route = BottomBarNavGraph.Settings.route) {
         ScreenContent(
-            name = BottomBarRoutes.Settings.route,
+            name = BottomBarNavGraph.Settings.route,
             onClick = {
                 navController.navigate(Graph.DETAILS)
             }
