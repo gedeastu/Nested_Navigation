@@ -4,10 +4,10 @@ import androidx.navigation.NavGraphBuilder
 import androidx.navigation.NavHostController
 import androidx.navigation.compose.composable
 import androidx.navigation.navigation
-import com.example.nested_navigation.screens.authScreens.ForgotPasswordScreen
-import com.example.nested_navigation.screens.authScreens.LoginScreen
-import com.example.nested_navigation.screens.authScreens.RegistrationScreen
-import com.example.nested_navigation.screens.authScreens.SplashScreen
+import com.example.nested_navigation.ui.screens.authScreens.ForgotPasswordScreen
+import com.example.nested_navigation.ui.screens.authScreens.LoginScreen
+import com.example.nested_navigation.ui.screens.authScreens.RegistrationScreen
+import com.example.nested_navigation.ui.screens.authScreens.SplashScreen
 
 fun NavGraphBuilder.authNavGraph(navController: NavHostController) {
     navigation(

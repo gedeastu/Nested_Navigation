@@ -1,4 +1,4 @@
-package com.example.nested_navigation.widgets
+package com.example.nested_navigation.ui.widgets
 
 import android.app.Activity
 import androidx.compose.foundation.layout.ExperimentalLayoutApi

@@ -1,4 +1,4 @@
-package com.example.nested_navigation.screens.authScreens
+package com.example.nested_navigation.ui.screens.authScreens
 
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
@@ -12,23 +12,25 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
 import androidx.navigation.NavController
+import com.example.nested_navigation.graphs.AuthScreen
+import com.example.nested_navigation.graphs.Graph
 
 @Composable
-fun ForgotPasswordScreen(navController: NavController){
+fun LoginScreen(navController: NavController) {
     Box(modifier = Modifier.fillMaxSize(),contentAlignment = Alignment.Center) {
         Column {
-            Text(text = "Forgot Password Screen")
+            Text(text = "Login Screen")
             Button(
                 onClick = {
-                    // Perform forgot password logic here
-                    // For simplicity, navigate back to Login screen
-                    navController.popBackStack()
+                    navController.navigate(Graph.MAIN_SCREEN_PAGE) {
+                        popUpTo(AuthScreen.Login.route) { inclusive = true }
+                    }
                 },
                 modifier = Modifier
                     .fillMaxWidth()
                     .padding(8.dp)
             ) {
-                Text(text = "Reset Password")
+                Text(text = "Login")
             }
         }
     }

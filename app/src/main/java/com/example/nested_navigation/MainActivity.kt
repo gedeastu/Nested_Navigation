@@ -10,7 +10,7 @@ import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
-import com.example.nested_navigation.screens.MainScreen
+import com.example.nested_navigation.ui.screens.MainScreen
 import com.example.nested_navigation.ui.theme.Nested_navigationTheme
 
 class MainActivity : ComponentActivity() {

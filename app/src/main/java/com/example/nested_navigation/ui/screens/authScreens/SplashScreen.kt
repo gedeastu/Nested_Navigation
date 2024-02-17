@@ -1,4 +1,4 @@
-package com.example.nested_navigation.screens.authScreens
+package com.example.nested_navigation.ui.screens.authScreens
 
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.background

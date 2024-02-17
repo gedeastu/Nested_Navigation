@@ -1,4 +1,4 @@
-package com.example.nested_navigation.widgets
+package com.example.nested_navigation.ui.widgets
 
 import androidx.compose.foundation.layout.RowScope
 import androidx.compose.material3.ExperimentalMaterial3Api

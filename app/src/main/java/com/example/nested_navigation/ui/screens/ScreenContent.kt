@@ -1,4 +1,4 @@
-package com.example.nested_navigation.screens
+package com.example.nested_navigation.ui.screens
 
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Box

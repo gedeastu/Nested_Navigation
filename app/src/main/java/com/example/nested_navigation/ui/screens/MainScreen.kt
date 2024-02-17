@@ -1,4 +1,4 @@
-package com.example.nested_navigation.screens
+package com.example.nested_navigation.ui.screens
 
 import androidx.compose.foundation.layout.ExperimentalLayoutApi
 import androidx.compose.foundation.layout.padding
@@ -9,14 +9,14 @@ import androidx.compose.ui.Modifier
 import androidx.navigation.NavHostController
 import androidx.navigation.compose.rememberNavController
 import com.example.nested_navigation.graphs.MainNavGraph
-import com.example.nested_navigation.widgets.BottomBar
-import com.example.nested_navigation.widgets.SimpleLightTopAppBar
+import com.example.nested_navigation.ui.widgets.BottomBar
+import com.example.nested_navigation.ui.widgets.SimpleLightTopAppBar
 
 @OptIn(ExperimentalMaterial3Api::class, ExperimentalLayoutApi::class)
 @Composable
 fun MainScreen(navController: NavHostController = rememberNavController()) {
     Scaffold(
-        topBar = {SimpleLightTopAppBar("Nested Navigation Demo")},
+        topBar = { SimpleLightTopAppBar("Nested Navigation Demo") },
         bottomBar = { BottomBar(navController = navController) }) { padding ->
         Modifier.padding(padding)
         MainNavGraph(navController = navController)
